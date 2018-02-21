@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="Title View" />
+
+        <ImageView
+            android:id="@+id/movie_poster"
+            android:layout_width="140dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:contentDescription="poster"/>
+
+        <TextView
+            android:id="@+id/movie_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Movie Description" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <RadioButton
+                android:id="@+id/already_seen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Already seen"
+                android:onClick="seenChecked"/>
+
+            <RadioButton
+                android:id="@+id/want_to_see"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Want to see"
+                android:onClick="wantChecked"/>
+
+            <RadioButton
+                android:id="@+id/do_not_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do not like"
+                android:onClick="dontLikeChecked"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>
